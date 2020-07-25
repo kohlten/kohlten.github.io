@@ -1,0 +1,9 @@
+{% if site.texture.showNav %}
+<div class="navbar">
+	<ul>
+		{% for link in site.data.navigation %}
+		<a href="{{ link.link }}"><li {% if link.link == page.link %}class="active"{% endif %} >{{ link.name }}</li></a>
+		{% endfor %}
+	</ul>
+</div>
+{%- endif -%}

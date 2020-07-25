@@ -1,0 +1,24 @@
+---
+layout: page
+---
+{%- if site.posts.size > 0 -%}
+<ul class="posts">
+	{%- for post in site.posts -%}
+	<li>
+		{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+		<div class="post-meta">
+			<a class="post-link" href="{{ post.url | relative_url }}">
+				<h2 class="post-title">{{ post.title | escape }}</h2>
+			</a>
+		</div>
+	</li>
+	<div class="post-home">
+		<div class="grid-container">
+			<img src="{{ post.image }}" style="width: 100px; height: 100px">
+			<p style="">{{ post.description }}</p>
+		</div>
+	</div>
+	{%- endfor -%}
+</ul>
+{%- endif -%}
+

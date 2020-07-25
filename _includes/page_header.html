@@ -1,0 +1,25 @@
+<div class="grid">
+	<div class="container">
+		<h1>{{ site.texture.title }}</h1>
+		<h2>{{ site.texture.tagline }}</h2>
+		<ul class="social">
+			{%- if site.texture.social_links.github -%}
+				<form action="https://gitlab.com/{{ site.texture.social_links.github }}">
+					<button class="button" type="submit">GITLAB</button>
+				</form>
+			{%- endif -%}
+			{%- if site.texture.social_links.linkedIn -%}
+				<a href="https://linkedin.com/{{ site.texture.social_links.linkedIn }}"><li><i class="icon-linkedin-squared"></i></li></a>
+			{%- endif -%}
+			{%- if site.texture.social_links.twitter -%}
+				<a href="https://twitter.com/{{ site.texture.social_links.twitter }}"><li><i class="icon-twitter-squared"></i></li></a>
+			{%- endif -%}
+		</ul>
+	</div>
+	<div class="container">
+		<ul class="contact">
+			<p>Email: alex.strole004@gmail.com</p>
+			<p>Phone: 435-287-5690</p>
+		</ul>
+	</div>
+</div>
